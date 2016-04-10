@@ -6,7 +6,8 @@ const tests = [
     'bubble_v2',
     'insertion',
     'insertion_v2',
-    'cocktail'
+    'cocktail',
+    'comb'
 ];
 
 for (let item of tests) {
@@ -34,6 +35,22 @@ for (let item of tests) {
 
         it('Should sort [1, 0, 0, 0]', ()=> {
             expect(sort([1, 0, 0, 0])).eql([0, 0, 0, 1]);
+        });
+
+        it('Should sort [1, 0, 0, 1]', ()=> {
+            expect(sort([1, 0, 0, 1])).eql([0, 0, 1, 1]);
+        });
+
+        it('Should sort [0, 0, 0, 1]', ()=> {
+            expect(sort([0, 0, 0, 1])).eql([0, 0, 0, 1]);
+        });
+
+        it('Should sort [0, 0, 0, 0]', ()=> {
+            expect(sort([0, 0, 0, 0])).eql([0, 0, 0, 0]);
+        });
+
+        it('Should sort [0, 3, 0]', ()=> {
+            expect(sort([0, 3, 0])).eql([0, 0, 3]);
         });
     });
 }

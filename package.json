@@ -13,7 +13,7 @@
     "url": "git://github.com/Connormiha/sort-algorithms-javascript.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --reporter nyan"
   },
   "devDependencies": {
     "chai": "3.5.0",

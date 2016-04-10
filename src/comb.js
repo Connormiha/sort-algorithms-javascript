@@ -4,7 +4,7 @@ const swap = require('./swap');
 
 /**
  * Cocktail sort
- * @see https://en.wikipedia.org/wiki/Cocktail_shaker_sort
+ * @see https://en.wikipedia.org/wiki/Comb_sort
  * @param {Array} array
  * @return {Array}
  */
