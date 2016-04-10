@@ -3,7 +3,7 @@
 const swap = require('./swap');
 
 /**
- * Cocktail sort
+ * Comb sort
  * @see https://en.wikipedia.org/wiki/Comb_sort
  * @param {Array} array
  * @return {Array}
@@ -11,30 +11,22 @@ const swap = require('./swap');
 function cocktailSort(array) {
     array = array.slice();
 
-    let left = 0;
-    let right = array.length - 1;
-    let swapped = true;
+    let gap = array.length;
+    let swapped = false;
 
-    while (left < right && swapped) {
+    while (swapped || gap > 1) {
+        if (gap > 1) {
+            gap = parseInt(gap / 1.247);
+        }
+
         swapped = false;
 
-        for (let i = left; i < right; i++) {
-            if (array[i] > array[i + 1]) {
-                swap(array, i, i + 1);
+        for (let i = 0; i + gap < array.length; i++) {
+            if (array[i] > array[i + gap]) {
+                swap(array, i, i + gap);
                 swapped = true;
             }
         }
-
-        right--;
-
-        for (let i = right; i > left; i--) {
-            if (array[i] < array[i - 1]) {
-                swap(array, i, i - 1);
-                swapped = true;
-            }
-        }
-
-        left++;
     }
 
     return array;
