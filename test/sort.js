@@ -1,8 +1,15 @@
 'use strict';
 
 const expect = require('chai').expect;
+const tests = [
+    'bubble',
+    'bubble_v2',
+    'insertion',
+    'insertion_v2',
+    'cocktail'
+];
 
-for (let item of ['bubble', 'insertion', 'insertion_v2', 'bubble_v2']) {
+for (let item of tests) {
     describe(`Sort ${item}`, ()=> {
         const sort = require(`../src/${item}`);
 
