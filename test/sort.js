@@ -2,7 +2,7 @@
 
 const expect = require('chai').expect;
 
-for (let item of ['bubble', 'insertion', 'insertion_v2']) {
+for (let item of ['bubble', 'insertion', 'insertion_v2', 'bubble_v2']) {
     describe(`Sort ${item}`, ()=> {
         const sort = require(`../src/${item}`);
 
