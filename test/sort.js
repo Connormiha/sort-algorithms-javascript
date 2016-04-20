@@ -7,7 +7,8 @@ const tests = [
     'insertion',
     'insertion_v2',
     'cocktail',
-    'comb'
+    'comb',
+    'heap'
 ];
 
 for (let item of tests) {
